@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    3.静态资源访问的权限开放,交给Tomcat-->
+    <mvc:default-servlet-handler/>
+<!--    1.mvc的注解驱动-->
+    <mvc:annotation-driven />
+<!--    2.配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--        配置前后缀-->
+        <property name="prefix" value="/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <!--    开启注解扫描，扫描controller包-->
+    <context:component-scan base-package="com.dustin.controller"/>
+
+<!--    配置权限拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+<!--            代表配置对哪些资源执行拦截-->
+            <mvc:mapping path="/**"/>
+            <!--            配置对哪些资源不执行拦截操作-->
+<!--            别拦截静态资源啊-->
+            <mvc:exclude-mapping path="/plugins/"/>
+            <mvc:exclude-mapping path="/img/"/>
+            <mvc:exclude-mapping path="/css/"/>
+            <mvc:exclude-mapping path="/user/login"/>
+            <bean class="com.dustin.interceptor.PrivilegeInterceptor"/>
+
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+</beans>

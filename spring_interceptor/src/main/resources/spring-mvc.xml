@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+<!--    自动加载RequestMappingHandlerMapping(处理映射器)和RequestMappingHandlerAdapter（处理适配器）-->
+<mvc:annotation-driven/>
+
+<!--    配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="suffix" value=".jsp"/>
+        <property name="prefix" value="/"/>
+    </bean>
+<!--    静态资源的开放-->
+    <mvc:default-servlet-handler/>
+<!--    开启注解扫描-->
+    <context:component-scan base-package="com.dustin.*"/>
+
+<!--    配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+<!--            对哪些资源执行拦截操作 /**代表对所有的资源进行拦截-->
+            <mvc:mapping path="/**"/>
+            <bean id="myInterceptor1" class="com.dustin.interceptor.MyInterceptor1"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <!--            对哪些资源执行拦截操作 /**代表对所有的资源进行拦截-->
+            <mvc:mapping path="/**"/>
+            <bean id="myInterceptor2" class="com.dustin.interceptor.MyInterceptor2"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

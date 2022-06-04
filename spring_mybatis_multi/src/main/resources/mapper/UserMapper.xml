@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dustin.mapper.UserMapper">
+
+    <resultMap id="userMap" type="user">
+        <id column="id" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+<!--        <result column="birthday" property="birthday" typeHandler="com.dustin.handler.DateLongHandler"></result>-->
+        <result column="birthday" property="birthday" typeHandler="com.dustin.handler.DateLongHandler"></result>
+<!--        配合集合信息
+               property集合名称，实体对应属性名称
+               ofType：当前集合中的数据类型-->
+        <collection property="orderList" ofType="order">
+<!--            封装order的数据-->
+            <id column="oid" property="id"/>
+<!--            <result column="ordertime" property="ordertime" typeHandler="com.dustin.handler.DateStringHandler"/>-->
+            <result column="ordertime" property="ordertime" typeHandler="com.dustin.handler.DateStringHandler"/>
+            <result column="total" property="total"/>
+        </collection>
+
+    </resultMap>
+
+<!--    查询用户同时查询订单-->
+    <select id="findAll"  resultMap="userMap">
+        select u.id,o.id oid,o.ordertime,o.total,u.username,u.password,u.birthday from orders o,user u where u.id=o.uid
+    </select>
+
+<!--    封装user的信息-->
+    <resultMap id="userRoleMap" type="user">
+        <id column="userId" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+        <result column="birthday" property="birthday" typeHandler="com.dustin.handler.DateLongHandler"></result>
+
+        <collection property="roleList" ofType="role">
+            <!--            封装role的数据-->
+            <id column="roleId" property="id"/>
+            <result column="roleDesc" property="roleDesc" />
+            <result column="roleName" property="roleName"/>
+        </collection>
+
+
+    </resultMap>
+
+<!--    查询用户具有的角色-->
+    <select id="findUserAndRole" resultMap="userRoleMap">
+        select ur.userId,u.username,u.password,u.birthday,ur.roleId,r.roleName,r.roleDesc
+        from user u,user_role ur,role r where u.id=ur.userId and r.id=ur.roleId
+    </select>
+</mapper>

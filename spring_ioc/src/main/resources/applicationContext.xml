@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    <bean id="userDao" class="com.dustin.dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destroy"></bean>-->
+    <!--    <bean id="userDao" class="com.dustin.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+<!--
+    <bean id="factory" class="com.dustin.factory.DynamicFactory"></bean>
+    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>
+-->
+
+    <bean id="user1" class="com.dustin.main.User">
+        <property name="name" value="tom"/>
+        <property name="addr" value="beijing"></property>
+    </bean>
+    <bean id="user2" class="com.dustin.main.User">
+        <property name="name" value="jerry"/>
+        <property name="addr" value="beijing"></property>
+    </bean>
+    <bean id="userDao" class="com.dustin.dao.impl.UserDaoImpl">
+        <!--普通数据类型-->
+        <property name="username" value="张三"/>
+        <property name="age" value="28"/>
+        <!--集合数据-->
+        <property name="strList">
+            <list>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+<!--                <ref>user</ref>-->
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="user1" value-ref="user1"></entry>
+                <entry key="user2" value-ref="user2"></entry>
+            </map>
+        </property>
+
+        <!--property类型-->
+        <property name="properties">
+            <props>
+                <prop key="pop1">p1</prop>
+                <prop key="pop2">p2</prop>
+                <prop key="pop3">p3</prop>
+            </props>
+        </property>
+    </bean>
+<!--    <bean id="userService" class="com.dustin.service.impl.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"></property>-->
+<!--    </bean>-->
+<!--    <bean id="userService" class="com.dustin.service.impl.UserServiceImpl" p:userDao-ref="userDao"></bean>-->
+
+    <bean id="userService" class="com.dustin.service.impl.UserServiceImpl" >
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+<!--    引入其他配置文件(分模块开发)-->
+    <import resource="applicationContext-User.xml"/>
+    <import resource="applicationContext-product.xml"/>
+
+</beans>

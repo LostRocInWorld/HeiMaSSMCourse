@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="3" failures="0" name="com.dustin.MyBatisTest" time="1.516" errors="1" skipped="0">
+  <properties>
+    <property name="idea.version" value="2021.1.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_31\jre\bin"/>
+    <property name="java.vm.version" value="25.31-b07"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\IdeaJavaProject\SSM\spring_mybatis_multi"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="TW"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\IdeaJavaProject\SSM\spring_mybatis_multi"/>
+    <property name="java.runtime.version" value="1.8.0_31-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_31\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\DUSTIN~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="maven.ext.class.path" value="E:\java_install\IDEA\ideaIU-2021.1.2.win\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="E:\java_install\apache-maven-3.6.3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="MS950"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_31\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\app\Dustin.Peng.OA\product\11.2.0\client_2\bin;E:\app\Dustin.Peng.OA\product\11.2.0\client_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_31\bin;C:\Program Files\Java\jdk1.8.0_31\jre\bin;E:\java_install\mysql\bin;C:\Program Files\FFmpeg\bin;E:\java_install\apache-maven-3.6.3\bin;C:\Users\Dustin_Peng\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="E:\java_install\apache-maven-3.6.3/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\Dustin_Peng"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="Dustin_Peng"/>
+    <property name="java.class.path" value="E:\java_install\apache-maven-3.6.3\boot\plexus-classworlds-2.6.0.jar;E:\java_install\apache-maven-3.6.3\boot\plexus-classworlds.license;E:\java_install\IDEA\ideaIU-2021.1.2.win\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_31\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.1.2 -s E:\java_install\apache-maven-3.6.3\conf\settings.xml test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_31"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_31\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_31\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_31\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_31\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_31\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_31\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_31\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_31\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_31\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\java_install\apache-maven-3.6.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.dustin.MyBatisTest" name="test" time="1.385"/>
+  <testcase classname="com.dustin.MyBatisTest" name="test2" time="0"/>
+  <testcase classname="com.dustin.MyBatisTest" name="test3" time="0.131">
+    <error message="
+### Error querying database.  Cause: org.apache.ibatis.executor.result.ResultMapException: Error attempting to get column &apos;birthday&apos; from result set.  Cause: java.lang.NullPointerException
+### The error may exist in mapper/UserMapper.xml
+### The error may involve com.dustin.mapper.UserMapper.findAll
+### The error occurred while handling results
+### SQL: select u.id,o.id oid,o.ordertime,o.total,u.username,u.password,u.birthday from orders o,user u where u.id=o.uid
+### Cause: org.apache.ibatis.executor.result.ResultMapException: Error attempting to get column &apos;birthday&apos; from result set.  Cause: java.lang.NullPointerException" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.executor.result.ResultMapException: Error attempting to get column &apos;birthday&apos; from result set.  Cause: java.lang.NullPointerException
+### The error may exist in mapper/UserMapper.xml
+### The error may involve com.dustin.mapper.UserMapper.findAll
+### The error occurred while handling results
+### SQL: select u.id,o.id oid,o.ordertime,o.total,u.username,u.password,u.birthday from orders o,user u where u.id=o.uid
+### Cause: org.apache.ibatis.executor.result.ResultMapException: Error attempting to get column &apos;birthday&apos; from result set.  Cause: java.lang.NullPointerException
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy10.findAll(Unknown Source)
+	at com.dustin.MyBatisTest.test3(MyBatisTest.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.executor.result.ResultMapException: Error attempting to get column &apos;birthday&apos; from result set.  Cause: java.lang.NullPointerException
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:68)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:520)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:401)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:330)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:303)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:196)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 35 more
+Caused by: java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1439)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at com.dustin.handler.DateStringHandler.getNullableResult(DateStringHandler.java:36)
+	at com.dustin.handler.DateStringHandler.getNullableResult(DateStringHandler.java:20)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:66)
+	... 49 more
+</error>
+    <system-out>04:19:07,612 DEBUG PooledDataSource:335 - PooledDataSource forcefully closed/removed all connections.
+04:19:07,614 DEBUG PooledDataSource:335 - PooledDataSource forcefully closed/removed all connections.
+04:19:07,614 DEBUG PooledDataSource:335 - PooledDataSource forcefully closed/removed all connections.
+04:19:07,614 DEBUG PooledDataSource:335 - PooledDataSource forcefully closed/removed all connections.
+04:19:07,615 DEBUG PooledDataSource:335 - PooledDataSource forcefully closed/removed all connections.
+04:19:07,664 DEBUG JdbcTransaction:137 - Opening JDBC Connection
+04:19:07,711 DEBUG PooledDataSource:406 - Created connection 195984832.
+04:19:07,712 DEBUG JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@bae7dc0]
+04:19:07,712 DEBUG findAll:159 - ==&gt;  Preparing: select u.id,o.id oid,o.ordertime,o.total,u.username,u.password,u.birthday from orders o,user u where u.id=o.uid 
+04:19:07,712 DEBUG findAll:159 - ==&gt; Parameters: 
+</system-out>
+  </testcase>
+</testsuite>

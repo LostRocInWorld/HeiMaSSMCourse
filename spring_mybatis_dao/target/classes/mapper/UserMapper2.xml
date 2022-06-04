@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dustin_mapper.dao.UserMapper">
+
+<!--    sql语句的抽取-->
+    <sql id="selectUser">select * from user</sql>
+    <parameterMap id="ids" type="list"></parameterMap>
+    <select id="findByCondition" parameterType="user" resultType="user">
+--     抽取sql的引用
+    <include refid="selectUser"></include>
+        <where>
+            <if test="id!=0">
+                and id=#{id}
+            </if>
+            <if test="username!=null">
+                and username=#{username}
+            </if>
+            <if test="password!=null">
+                and password=#{password}
+            </if>
+        </where>
+    </select>
+
+    <select id="findByIds" resultType="user" parameterType="map">
+        select * from user 
+        <where>
+            <foreach collection="ids" open="id in (" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+        </where>
+    </select>
+
+</mapper>

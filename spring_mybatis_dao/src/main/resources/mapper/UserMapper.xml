@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dustin.dao.UserMapper">
+<!--    查詢操作-->
+<!--    resultType结果集类型 ,与list集合容器中装入的对象一致-->
+    <select id="findAll" resultType="user">
+        select * from user
+    </select>
+
+<!--    根据id查询-->
+    <select id="findById" resultType="user" parameterType="int">
+        select * from user where id=#{id}
+    </select>
+</mapper>

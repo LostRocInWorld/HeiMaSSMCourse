@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring_ioc/demotest/demotest.iml" filepath="$PROJECT_DIR$/spring_ioc/demotest/demotest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_dao/src/main/main.iml" filepath="$PROJECT_DIR$/spring_mybatis_dao/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_aop/spring_aop.iml" filepath="$PROJECT_DIR$/spring_aop/spring_aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_config/spring_config.iml" filepath="$PROJECT_DIR$/spring_config/spring_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_exception/spring_exception.iml" filepath="$PROJECT_DIR$/spring_exception/spring_exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_interceptor/spring_interceptor.iml" filepath="$PROJECT_DIR$/spring_interceptor/spring_interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_ioc/spring_ioc.iml" filepath="$PROJECT_DIR$/spring_ioc/spring_ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_ioc_anno/spring_ioc_anno.iml" filepath="$PROJECT_DIR$/spring_ioc_anno/spring_ioc_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_jdbc/spring_jdbc.iml" filepath="$PROJECT_DIR$/spring_jdbc/spring_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/spring_mvc/spring_mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis/spring_mybatis.iml" filepath="$PROJECT_DIR$/spring_mybatis/spring_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_anno/spring_mybatis_anno.iml" filepath="$PROJECT_DIR$/spring_mybatis_anno/spring_mybatis_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_dao/spring_mybatis_dao.iml" filepath="$PROJECT_DIR$/spring_mybatis_dao/spring_mybatis_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_multi/spring_mybatis_multi.iml" filepath="$PROJECT_DIR$/spring_mybatis_multi/spring_mybatis_multi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_ssm/spring_ssm.iml" filepath="$PROJECT_DIR$/spring_ssm/spring_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_test/spring_test.iml" filepath="$PROJECT_DIR$/spring_test/spring_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_tx/spring_tx.iml" filepath="$PROJECT_DIR$/spring_tx/spring_tx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_dao/src/test/test.iml" filepath="$PROJECT_DIR$/spring_mybatis_dao/src/test/test.iml" />
+    </modules>
+  </component>
+</project>

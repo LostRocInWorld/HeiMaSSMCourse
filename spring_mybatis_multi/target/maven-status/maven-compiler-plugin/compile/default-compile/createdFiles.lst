@@ -1,0 +1,6 @@
+com\dustin\domain\User.class
+com\dustin\handler\DateLongHandler.class
+com\dustin\mapper\OrderMapper.class
+com\dustin\mapper\UserMapper.class
+com\dustin\domain\Order.class
+com\dustin\handler\DateStringHandler.class

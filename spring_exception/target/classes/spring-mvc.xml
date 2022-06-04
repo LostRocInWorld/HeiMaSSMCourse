@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+<!--    自动加载RequestMappingHandlerMapping(处理映射器)和RequestMappingHandlerAdapter（处理适配器）-->
+<mvc:annotation-driven/>
+
+<!--    配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="suffix" value=".jsp"/>
+        <property name="prefix" value="/"/>
+    </bean>
+<!--    静态资源的开放-->
+    <mvc:default-servlet-handler/>
+<!--    开启注解扫描-->
+    <context:component-scan base-package="com.dustin.*"/>
+
+<!--&lt;!&ndash;    配置简单异常处理器&ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--&lt;!&ndash;        value代表跳转的视图名，因为配置了视图解析器的前后缀，所以这儿只是视图的名称&ndash;&gt;-->
+<!--        <property name="defaultErrorView" value="error"/>-->
+<!--        <property name="exceptionMappings">-->
+<!--            <map>-->
+<!--                <entry key="java.lang.ClassCastException" value="error1"/>-->
+<!--                <entry key="com.dustin.exception.MyException" value="error2"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    配置自定义异常处理器-->
+    <bean class="com.dustin.resolver.MyExceptionResolver"/>
+</beans>

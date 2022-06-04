@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    mybatis核心配置文件-->
+<!--    1.加载propert文件-->
+    <properties resource="jdbc.properties"/>
+<!--2.定义别名-->
+    <typeAliases>
+<!--        第一种方式，使用全限定名来定义别名-->
+<!--        <typeAlias type="com.dustin.domain.Account" alias="account"></typeAlias>-->
+<!--        第二种方式扫描包，默认定义当前包下类的别名为类的名称，或者首字母小写两种-->
+        <package name="com.dustin.domain"/>
+    </typeAliases>
+</configuration>

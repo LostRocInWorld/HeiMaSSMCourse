@@ -1,0 +1,13 @@
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\domain\User.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\controller\RoleController.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\dao\impl\RoleDaoImpl.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\controller\UserController.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\service\UserService.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\dao\impl\UserDaoImpl.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\dao\UserDao.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\service\impl\RoleServiceImpl.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\dao\RoleDao.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\domain\Role.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\service\impl\UserServiceImpl.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\service\RoleService.java
+D:\IdeaJavaProject\SSM\spring_test\src\main\java\com.dustin\interceptor\PrivilegeInterceptor.java
